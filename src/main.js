@@ -17,11 +17,14 @@ $(document).ready(function() {
     baseCurrencyInput = $("#baseCurrency").val();
     baseAmountInput = $("#baseAmount").val();
     targetCurrencyInput = $("#targetCurrency").val();
-    console.log(baseCurrencyInput, baseAmountInput,targetCurrencyInput);
 
     Exchange.getConversionRates(baseCurrencyInput)
       .then(function(response) {
-        console.log(response);
+        let conversionRates, targetCurrency, targetAmount;
+        conversionRates = response.conversion_rates;
+        targetCurrency = conversionRates[`${targetCurrencyInput}`];
+        targetAmount = parseFloat(baseAmountInput * targetCurrency).toFixed(2);
+        $("#targetAmount").val(targetAmount);
       });
   });
 });
