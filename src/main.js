@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Exchange from '../src/services/exchange.service.js';
 
-function setUpEventListeners() {
+
+function clearTargetAmountField() {
   $("#baseCurrency").on("focus", function() {
     $("#targetAmount").val('');
   });
@@ -15,13 +16,25 @@ function setUpEventListeners() {
     $("#targetAmount").val('');
   });
 }
+function displayError() {
+  $('#error').html(`<small style="color:red; text-align:center;">Sincerest apologies, dear currency conversion seeker, but it appears the interweb overlords are denying the entered currency conversion!<br>Please contact our chief tech consultant below who you'll notice also moonlights as our chief financial consultant.</small>`);
+}
+
+function clearError() {
+  $("#error").empty();
+}
+
+function setUpEventListeners() {
+  clearTargetAmountField();
+}
 
 $(document).ready(function() {
   setUpEventListeners();
 
   $("#form").on("submit", function(e) {
     e.preventDefault();
-
+    clearError();
+    
     let baseCurrencyInput, baseAmountInput, targetCurrencyInput;
     baseCurrencyInput = $("#baseCurrency").val();
     baseAmountInput = $("#baseAmount").val();
@@ -39,8 +52,8 @@ $(document).ready(function() {
         $("#targetAmount").val(targetAmount);
       })
       .catch(function(error) {
-        console.log(error.message);
-        $('#error').html(`<small style="color:red; text-align:center;">Sincerest apologies, dear currency conversion seeker, but it appears the interweb overlords are denying the entered currency conversion!<br>Please contact our chief tech consultant below who you'll notice also moonlights as our chief financial consultant.</small>`);
+        displayError();
+        console.log(error.message); // "console.log" usage only here for assignment to display error type
       });
   });
 });
