@@ -34,26 +34,48 @@ $(document).ready(function() {
   $("#form").on("submit", function(e) {
     e.preventDefault();
     clearError();
-    
+
     let baseCurrencyInput, baseAmountInput, targetCurrencyInput;
     baseCurrencyInput = $("#baseCurrency").val();
     baseAmountInput = $("#baseAmount").val();
     targetCurrencyInput = $("#targetCurrency").val();
-
-    Exchange.getConversionRates(baseCurrencyInput)
-      .then(function(response) {
-        if (response instanceof Error) {
-          throw Error(`ExchangeRate API error -- ${response.message}`);
+    
+    let storage = sessionStorage;
+    
+    function checkStorage() {
+      for (let key in storage) {
+        if (`rates_${baseCurrencyInput}` === key) {
+          return true;
         }
-        let conversionRates, targetCurrency, targetAmount;
-        conversionRates = response.conversion_rates;
-        targetCurrency = conversionRates[`${targetCurrencyInput}`];
-        targetAmount = parseFloat(baseAmountInput * targetCurrency).toFixed(2);
-        $("#targetAmount").val(targetAmount);
-      })
-      .catch(function(error) {
-        displayError();
-        console.log(error.message); // "console.log" usage only here for assignment to display error type
-      });
+      }
+    }
+
+    if (checkStorage()) {
+      console.log(true);
+      let conversionRates, targetCurrency, targetAmount;
+      conversionRates = JSON.parse(storage.getItem([`rates_${baseCurrencyInput}`]));
+      targetCurrency = conversionRates[`${targetCurrencyInput}`];
+      targetAmount = parseFloat(baseAmountInput * targetCurrency).toFixed(2);
+      $("#targetAmount").val(targetAmount);
+    } else {
+      Exchange.getConversionRates(baseCurrencyInput)
+        .then(function(response) {
+          if (response instanceof Error) {
+            throw Error(`ExchangeRate API error -- ${response.message}`);
+          }
+          let conversionRates, storedConversionRates;
+          conversionRates = response.conversion_rates; 
+          sessionStorage.setItem(`rates_${baseCurrencyInput}`, JSON.stringify(conversionRates));
+          storedConversionRates = JSON.parse(sessionStorage.getItem(`rates_${baseCurrencyInput}`));
+          let targetCurrency, targetAmount;
+          targetCurrency = storedConversionRates[`${targetCurrencyInput}`];
+          targetAmount = parseFloat(baseAmountInput * targetCurrency).toFixed(2);
+          $("#targetAmount").val(targetAmount);
+        })
+        .catch(function(error) {
+          displayError();
+          console.log(error.message); // "console.log" usage only here for assignment to display error type
+        });
+    }
   });
 });
