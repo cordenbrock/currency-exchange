@@ -1,6 +1,6 @@
 export default class Exchange {
-  static getConversionRates(base) {
-    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${base}`)
+  static getConversionRates(baseCurrency) {
+    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${baseCurrency}`)
       .then (function(response) {
         if (!response.ok) {
           throw Error(response.statusText);
