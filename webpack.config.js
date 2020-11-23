@@ -37,13 +37,13 @@ module.exports = {
         loader: "eslint-loader"
       },
       {
-        test: /\.(mp4|gif|png|jpe?g)$/,
+        test: /\.(woff|woff2|eot|ttf|otf|mp4|gif|png|jpe?g)$/,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'assets/video/'
+              outputPath: 'assets/resource/'
             }
           }
         ]
