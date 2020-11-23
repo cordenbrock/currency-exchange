@@ -6,22 +6,21 @@
   <title>Current currency</title>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <hr>
-      <h1>~~~$~$~$~~~ EXCHANGERATOR ~~~$~$~$~~~</h1>
-      <hr>
-    </header>
-    <div class="row">
-      <div class="col-8">
+  <header class="container pt-5">
+    <hr>
+    <h1><span class="gold-text">~$~ EXCHANGERATOR ~$~</span></h1>
+    <hr>
+  </header>
+  <div class="container currency-convertor">
+    <div class="row pt-5 pb-5">
+      <div class="col-md-10">
         <form id="form">
-          
           <div class="form-row">
-            <div class="form-group col-5">
+            <div class="form-group col-md-5">
               <label for="baseCurrency" class="">Currency</label>
               <select class="form-control" id="baseCurrency" required>
                 <option value="USD">United States Dollar (USD)</option>
-                <option value="ARNFC">A Real, Not-Fake Crytocurrency (ARNFC)</option>
+                <option value="SRNFC">Super-Real, Not-Fake Cryptocoin (SRNFC)</option>
                 <option value="AED">UAE Dirham (AED)</option>
                 <option value="ARS">Argentine Peso (ARS)</option>
                 <option value="AUD">Australian Dollar (AUD)</option>
@@ -75,12 +74,12 @@
                 <option value="ZAR">South African Rand (ZAR)</option>
               </select>
             </div>
-            <div class="form-group col">
-              <h1>=></h1>
+            <div class="form-group col-md-2">
+              <h2 class="gold-text">>> T >></h2>
             </div>
-            <div class="form-group col-5">
+            <div class="form-group col-md-5">
               <label for="targetCurrency" class="">Currency</label>
-              <select id="targetCurrency" class="form-control" required>
+              <select class="form-control" id="targetCurrency" required>
                 <option disabled selected value>Select Currency</option>
                 <option value="USD">United States Dollar (USD)</option>
                 <option value="AED">UAE Dirham (AED)</option>
@@ -136,36 +135,47 @@
                 <option value="ZAR">South African Rand (ZAR)</option>
               </select>
             </div>
-            <div class="form-group col-5">
+            <div class="form-group col-md-5">
               <label for="baseAmount" class="">Amount</label>
               <input type="number" class="form-control" id="baseAmount" min="0" step="any" value="1.00" onfocus="this.value = ''">
             </div>
-            <div class="form-group col">
-              <h1>=></h1>
+            <div class="form-group col-md-2">
+              <h2 class="gold-text">>> T >></h2>
             </div>
-            <div class="form-group col-5">
+            <div class="form-group col-md-5">
               <label for="targetAmount" class="">Amount</label>
               <input type="number" class="form-control" id="targetAmount" step="any" disabled placeholder="Currency conversion">
             </div>
           </div>
           <div>
             <span><small class="pt-5" id="error"></small></span>
-            <input type="submit" class="btn mt-3 col-12" value="exchangify!">
+            <input type="submit" class="btn mt-3 col-md-12" value="EXCHANGIFY!">
           </div>
         </form>
-        <h5 class="pt-5">In financial trouble? Another racketeering scheme gone bad? Need to launder money to offshore bank accounts, but don't know conversion rates?</h5>
-        <p class="gif-tagline">Fear not, our prospectively certified financial consultant is here to sell you help!</p>
-        <img src="https://media.giphy.com/media/m7FO0p9hTc59e/giphy.gif" alt="gif of 'the mask' with handfuls of cash" class="gif">
-        <p>Contact us today for a *free* advisory meeting!</p>
-        <p>Additionally, we offer a variety of services, including but not limited to: snake-oil purification, authentic currency counterfeiting, and bona-fide medical quackery!</p>
-        <button class="btn">Fall for the con!</button>
-        <br>
-        <span><small">*(terms apply: free does not necessarily meeean <em>free</em>.)*</small></span>
       </div>
     </div>
+    <hr>
+  </div> 
+  <div class="container grifter-drivel">
+    <div class="row">
+      <div class="col-md-10">
+        <h5 class="pt-5">In financial trouble? Another racketeering scheme gone... awry? Just need to launder money to offshore bank accounts, but don't know those pesky, everchanging conversion rates?</h5>
+        <img src="https://media.giphy.com/media/m7FO0p9hTc59e/giphy.gif" alt="gif of 'the mask' with handfuls of cash" class="gif">
+        <p class="pt-5 mt-3">Fear not! Our prospectively certified financial consultant is here to <span style='text-decoration-line:line-through'>sell you</span> help!</p>
+        <p>It's worth noting that our customer testimonials <span style='text-decoration-line:line-through'>have been censored though</span> are considered too praiseworthy by the BBB and FCC to broadcast to the public!</p>
+        <p>In addition to our financial consulting, we also offer a wide variety of <span style='text-decoration-line:line-through'>scams</span> services, including but not limited to: snake-oil testing and purification, organically sourced counterfeit currency, and bona-fide medical quackery!</p>
+      </div>
+      <div class="click-today">
+        <p>So whaddaya say chap!? Put down that corndog and contact us today for a limited, one-time-only special-offer, bargain-bonus-blowout, *free* consultation!</p>
+        <button class="btn" onclick="window.location.href='https://www.youtube.com/watch?v=-0kcet4aPpQ&list=PLi91b1ORYr4RVHcGEOFKhNBzB2rAvqQtr&index=28';">Change Your Life With Just One Click!!!</button>
+        <br>
+        <small>*(terms and conditions apply: <em>free</em> is a raaather loose definition and all passwords, bank info, ssn's, etc will be required without explanation or guarantee of secure processing)*</small>
+      </div>
+    </div>
+    <hr>
   </div>
 </body>
 <footer>
-  Exchangify, Copyright 2020 -- a proud subsidiary of Poorly Performing Charlatans, Inc.
+  <span class="gold-text">Exchangerator &copy 2020<br>A begrudingly proud subsidiary of Incompetent Charlatans, Inc.</span>
 </footer>
 </html>

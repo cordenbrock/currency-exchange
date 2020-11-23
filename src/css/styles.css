@@ -1,9 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
+@font-face {
+  font-family: 'moolahregular';
+  src: url('../assets/fonts/moolah.woff2') format('woff2'),
+       url('../assets/fonts/moolah.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 :root {
   --cashMoneyGreen: rgb(1, 22, 1);
   --washingtonsBeardGreen: rgb(170, 224, 179);
   --getThemFrogskinsGreen: rgb(13, 94, 13);
   --stayGoldenPonyboy: rgb(182, 156, 8);
-  --nothingGoldCanStay: rgb(241, 221, 107);
+  --nothingGoldCanStay: #f6e27a;
+  --goldilocksGradient: linear-gradient(
+    #462523 0,
+    #cb9b51 10%, 
+    #f6e27a 45%,
+    #f6f2c0 50%,
+    #f6e27a 55%,
+    #cb9b51 90%,
+    #462523 100%
+    );
 }
 
 html {
@@ -12,24 +31,47 @@ html {
 
 body {
   background: var(--cashMoneyGreen);
+  background: rgba(1,22,1);
   color: var(--washingtonsBeardGreen);
+}
+
+body::after {
+  content: "";
+  background: url('./../assets/img/money-hole.jpg') no-repeat fixed;
+  background-size: cover;
+  opacity: .03;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;   
 }
 
 h1 {
   color: var(--stayGoldenPonyboy);
+  font-family: 'Diplomata SC', cursive;
   text-align: center;
-  padding: 1rem;
-  text-shadow: 0 0 .25rem black;
+  padding: 1rem 0 1rem 0;
+  margin: 0;
+  text-shadow: 0 0 .5rem black;
+}
+
+h2 {
+  color: var(--stayGoldenPonyboy);
+  font-family: 'moolahregular', cursive;
+  text-align: center;
+  padding-top: 2rem;
+  text-shadow: 0 0 .5rem black;
 }
 
 hr {
   border-top: .15rem solid var(--getThemFrogskinsGreen);
 }
 
-.container {
-  margin-top: 10rem;
+p {
+  text-align: justify;
 }
-
 .row {
   justify-content: center;
 }
@@ -39,12 +81,12 @@ hr {
   color: var(--cashMoneyGreen);
   border: 3px solid var(--getThemFrogskinsGreen);
   width: 100%;
+  padding: .25rem .75rem;
 }
 
 .form-control:focus {
   background-color: var(--washingtonsBeardGreen);
-
-  border: 3px solid var(--stayGoldenPonyboy);
+  border: .2rem solid var(--stayGoldenPonyboy);
   box-shadow: 0 0 .2rem var(--stayGoldenPonyboy);
 }
 
@@ -54,25 +96,51 @@ hr {
 }
 
 .btn {
-  background: var(--getThemFrogskinsGreen);
-}
-
-.btn:hover {
-  background: var(--stayGoldenPonyboy);
-  color: var(--getThemFrogskinsGreen);
-  border: 3px solid var(--cashMoneyGreen);
-}
-
-.gif {
-  padding: 2rem;
+  background: var(--goldilocksGradient);
+  opacity: .9;
+  font-family: 'Diplomata SC', cursive;
+  font-weight: bolder;
+  display: block;
   margin: 0 auto;
 }
 
+.btn:hover {
+  color: var(--cashMoneyGreen);
+  opacity: 1
+}
+
+.btn:focus {
+  box-shadow: 0 0 .5rem var(--getThemFrogskinsGreen);
+}
+
+.gif {
+  /* display: block; */
+  /* margin: 0 auto; */
+  margin: 3rem;
+  border-radius: 2rem;
+  border: .1rem solid var(--stayGoldenPonyboy);
+  box-shadow: 0 0 .75rem var(--getThemFrogskinsGreen);
+  float: right;
+}
+
+.gold-text {
+  background-image: var(--goldilocksGradient);
+  color:transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
+
+.click-today {
+  text-align: center;
+}
+
 footer {
-  background: var(--getThemFrogskinsGreen);
-  color: var(--nothingGoldCanStay);
-  text-align: center; 
-  font-weight: bolder;
-  padding: 2rem;
+  font-family: 'Diplomata SC', cursive;
+  font-size: .75rem;
+  background: var(--cashMoneyGreen);
+  opacity: .5;
+  text-align: center;
+  box-shadow: 0 0 8rem var(--stayGoldenPonyboy);
+  padding: 1rem;
   margin-top: 5rem;
 }
