@@ -1,5 +1,4 @@
 node_modules/
 .Ds_Store
-dist/
 coverage/
 .env
