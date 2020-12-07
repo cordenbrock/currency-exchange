@@ -16,7 +16,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'tdd-template',
+      title: 'Exchangerator',
       template: './src/index.html',
       inject: 'body'
     }),
