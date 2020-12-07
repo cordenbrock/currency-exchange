@@ -3,6 +3,9 @@
 #### By Cory Nordenbrock
 ##### 11/30/20
 
+## Visit Site!
+
+https://exchangerator.herokuapp.com/
 
 ## _What_ does it do?
 
@@ -12,7 +15,7 @@
 ## _Why_ does it do?
 
 * Even though this app is arguably cooler than a turtle in a tophat and monocle riding a rocket-boosted hoverboard down Wall St., credit for the project prompt goes to the wonderful people at Epicodus!
-* Moreover, the core idea behind the development of this app was to learn how to make successful API calls as well as set up error handling that still elicits a quality user experience. In addition, this app utilizes the browser's built-in "sessionStorage" object to provide faster conversion times for the user and also account for the limited queries available in the _ExchangeRate-API_ free plan (more info on that below).
+* Moreover, the core idea behind the development of this app was to learn how to make successful API calls as well as set up error handling that still elicits a quality user experience. In addition, this app utilizes client-side sessionStorage to provide faster conversion times for the user and also account for the limited queries available in the _ExchangeRate-API_ free plan (more info on that below).
 
 ## Installation Options
 
@@ -38,6 +41,8 @@
 * _jQuery_
 * _Webpack_
 * _Postman_
+* _Heroku_
+* _Express_
 
 ### Known Bugs
 
