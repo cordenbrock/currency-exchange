@@ -6,176 +6,160 @@
   <title>Exchangerator</title>
 </head>
 <body>
-  <header class="container pt-5">
-    <hr>
-    <h1><span class="gold-text">~$~ EXCHANGERATOR ~$~</span></h1>
-    <hr>
-  </header>
-  <div class="container currency-convertor">
-    <div class="row pt-5 pb-5">
-      <div class="col-md-10">
-        <form id="form">
-          <div class="form-row">
-            <div class="form-group col-md-5">
-              <label for="baseCurrency" class="">Currency</label>
-              <select class="form-control" id="baseCurrency" required>
-                <option value="USD">United States Dollar (USD)</option>
-                <option value="SRNFC">Super-Real, Not-Fake Cryptocoin (SRNFC)</option>
-                <option value="AED">UAE Dirham (AED)</option>
-                <option value="ARS">Argentine Peso (ARS)</option>
-                <option value="AUD">Australian Dollar (AUD)</option>
-                <option value="BGN">Bulgarian Lev (BGN)</option>
-                <option value="BRL">Brazilian Real (BRL)</option>
-                <option value="BSD">Bahamian Dollar (BSD)</option>
-                <option value="CAD">Canadian Dollar (CAD)</option>
-                <option value="CHF">Swiss Franc (CHF)</option>
-                <option value="CLP">Chilean Peso (CLP)</option>
-                <option value="CNY">Chinese Renminbi (CNY)</option>
-                <option value="COP">Columbian Peso (COP)</option>
-                <option value="CZK">Czech Koruna (CZK)</option>
-                <option value="DKK">Danish Krone (DKK)</option>
-                <option value="DOP">Dominican Peso (DOP)</option>
-                <option value="EGP">Egyptian Pound (EGP)</option>
-                <option value="EUR">Euro (EUR)</option>
-                <option value="FJD">Fiji Dollar (FJD)</option>
-                <option value="GBP">Pound Sterling (GBP)</option>
-                <option value="GTQ">Guatemalan Quetzal (GTQ)</option>
-                <option value="HKD">Hong Kong Dollar (HKD)</option>
-                <option value="HRK">Croatian Kuna (HRK)</option>
-                <option value="HUF">Hungarian Forint (HUF)</option>
-                <option value="IDR">Indonesian Rupiah (IDR)</option>
-                <option value="ILS">Israeli New Shekel (ILS)</option>
-                <option value="INR">Indian Rupee (INR)</option>
-                <option value="ISK">Icelandic Krona (ISK)</option>
-                <option value="JPY">Japanese Yen (JPY)</option>
-                <option value="KRW">South Korean Won (KRW)</option>
-                <option value="KZT">Kazakhstani Tenge (KZT)</option>
-                <option value="MVR">Maldivian Rufiyaa (MVR)</option>
-                <option value="MXN">Mexican Peso (MXN)</option>
-                <option value="MYR">Malaysian Ringgit (MYR)</option>
-                <option value="NOK">Norwegian Krone (NOK)</option> 
-                <option value="NZD">New Zealand Dollar (NZD)</option>
-                <option value="PAB">Panamanian Balboa (PAB)</option>
-                <option value="PEN">Peruvian Sol (PEN)</option>
-                <option value="PHP">Philippine Peso (PHP)</option>
-                <option value="PKR">Pakistani Rupee (PKR)</option>
-                <option value="PLN">Polish Zloty (PLN)</option>
-                <option value="PYG">Paraguayan Guarani (PYG)</option>
-                <option value="RON">Romanian Leu (RON)</option>
-                <option value="RUB">Russian Ruble (RUB)</option>
-                <option value="SAR">Saudi Riyal (SAR)</option>
-                <option value="SEK">Swedish Krona (SEK)</option>
-                <option value="SGD">Singapore Dollar (SGD)</option>
-                <option value="THB">Thai Baht (THB)</option>
-                <option value="TRY">Turkish Lira (TRY)</option>
-                <option value="TWD">New Taiwan Dollar (TWD)</option>
-                <option value="UAH">Ukrainian Hryvnia (UAH)</option>
-                <option value="UYU">Uruguayan Peso (UYU)</option>
-                <option value="ZAR">South African Rand (ZAR)</option>
-              </select>
+  <div class="main">
+    <header class="container pt-5">
+      <hr>
+      <h1><span class="gold-text">~$~ EXCHANGERATOR ~$~</span></h1>
+      <hr>
+    </header>
+    <div class="container currency-convertor">
+      <div class="row pt-5 pb-5">
+        <div class="col-md-10">
+          <form id="form">
+            <div class="form-row">
+              <div class="form-group col-md-5">
+                <label for="baseCurrency" class="">Currency</label>
+                <select class="form-control" id="baseCurrency" required>
+                  <option value="USD">United States Dollar (USD)</option>
+                  <option value="SRNFC">Super-Real, Not-Fake Cryptocoin (SRNFC)</option>
+                  <option value="AED">UAE Dirham (AED)</option>
+                  <option value="ARS">Argentine Peso (ARS)</option>
+                  <option value="AUD">Australian Dollar (AUD)</option>
+                  <option value="BGN">Bulgarian Lev (BGN)</option>
+                  <option value="BRL">Brazilian Real (BRL)</option>
+                  <option value="BSD">Bahamian Dollar (BSD)</option>
+                  <option value="CAD">Canadian Dollar (CAD)</option>
+                  <option value="CHF">Swiss Franc (CHF)</option>
+                  <option value="CLP">Chilean Peso (CLP)</option>
+                  <option value="CNY">Chinese Renminbi (CNY)</option>
+                  <option value="COP">Columbian Peso (COP)</option>
+                  <option value="CZK">Czech Koruna (CZK)</option>
+                  <option value="DKK">Danish Krone (DKK)</option>
+                  <option value="DOP">Dominican Peso (DOP)</option>
+                  <option value="EGP">Egyptian Pound (EGP)</option>
+                  <option value="EUR">Euro (EUR)</option>
+                  <option value="FJD">Fiji Dollar (FJD)</option>
+                  <option value="GBP">Pound Sterling (GBP)</option>
+                  <option value="GTQ">Guatemalan Quetzal (GTQ)</option>
+                  <option value="HKD">Hong Kong Dollar (HKD)</option>
+                  <option value="HRK">Croatian Kuna (HRK)</option>
+                  <option value="HUF">Hungarian Forint (HUF)</option>
+                  <option value="IDR">Indonesian Rupiah (IDR)</option>
+                  <option value="ILS">Israeli New Shekel (ILS)</option>
+                  <option value="INR">Indian Rupee (INR)</option>
+                  <option value="ISK">Icelandic Krona (ISK)</option>
+                  <option value="JPY">Japanese Yen (JPY)</option>
+                  <option value="KRW">South Korean Won (KRW)</option>
+                  <option value="KZT">Kazakhstani Tenge (KZT)</option>
+                  <option value="MVR">Maldivian Rufiyaa (MVR)</option>
+                  <option value="MXN">Mexican Peso (MXN)</option>
+                  <option value="MYR">Malaysian Ringgit (MYR)</option>
+                  <option value="NOK">Norwegian Krone (NOK)</option> 
+                  <option value="NZD">New Zealand Dollar (NZD)</option>
+                  <option value="PAB">Panamanian Balboa (PAB)</option>
+                  <option value="PEN">Peruvian Sol (PEN)</option>
+                  <option value="PHP">Philippine Peso (PHP)</option>
+                  <option value="PKR">Pakistani Rupee (PKR)</option>
+                  <option value="PLN">Polish Zloty (PLN)</option>
+                  <option value="PYG">Paraguayan Guarani (PYG)</option>
+                  <option value="RON">Romanian Leu (RON)</option>
+                  <option value="RUB">Russian Ruble (RUB)</option>
+                  <option value="SAR">Saudi Riyal (SAR)</option>
+                  <option value="SEK">Swedish Krona (SEK)</option>
+                  <option value="SGD">Singapore Dollar (SGD)</option>
+                  <option value="THB">Thai Baht (THB)</option>
+                  <option value="TRY">Turkish Lira (TRY)</option>
+                  <option value="TWD">New Taiwan Dollar (TWD)</option>
+                  <option value="UAH">Ukrainian Hryvnia (UAH)</option>
+                  <option value="UYU">Uruguayan Peso (UYU)</option>
+                  <option value="ZAR">South African Rand (ZAR)</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <h2 class="gold-text">>> T >></h2>
+              </div>
+              <div class="form-group col-md-5">
+                <label for="targetCurrency" class="">Currency</label>
+                <select class="form-control" id="targetCurrency" required>
+                  <option disabled selected value>Select Currency</option>
+                  <option value="USD">United States Dollar (USD)</option>
+                  <option value="AED">UAE Dirham (AED)</option>
+                  <option value="ARS">Argentine Peso (ARS)</option>
+                  <option value="AUD">Australian Dollar (AUD)</option>
+                  <option value="BGN">Bulgarian Lev (BGN)</option>
+                  <option value="BRL">Brazilian Real (BRL)</option>
+                  <option value="BSD">Bahamian Dollar (BSD)</option>
+                  <option value="CAD">Canadian Dollar (CAD)</option>
+                  <option value="CHF">Swiss Franc (CHF)</option>
+                  <option value="CLP">Chilean Peso (CLP)</option>
+                  <option value="CNY">Chinese Renminbi (CNY)</option>
+                  <option value="COP">Columbian Peso (COP)</option>
+                  <option value="CZK">Czech Koruna (CZK)</option>
+                  <option value="DKK">Danish Krone (DKK)</option>
+                  <option value="DOP">Dominican Peso (DOP)</option>
+                  <option value="EGP">Egyptian Pound (EGP)</option>
+                  <option value="EUR">Euro (EUR)</option>
+                  <option value="FJD">Fiji Dollar (FJD)</option>
+                  <option value="GBP">Pound Sterling (GBP)</option>
+                  <option value="GTQ">Guatemalan Quetzal (GTQ)</option>
+                  <option value="HKD">Hong Kong Dollar (HKD)</option>
+                  <option value="HRK">Croatian Kuna (HRK)</option>
+                  <option value="HUF">Hungarian Forint (HUF)</option>
+                  <option value="IDR">Indonesian Rupiah (IDR)</option>
+                  <option value="ILS">Israeli New Shekel (ILS)</option>
+                  <option value="INR">Indian Rupee (INR)</option>
+                  <option value="ISK">Icelandic Krona (ISK)</option>
+                  <option value="JPY">Japanese Yen (JPY)</option>
+                  <option value="KRW">South Korean Won (KRW)</option>
+                  <option value="KZT">Kazakhstani Tenge (KZT)</option>
+                  <option value="MVR">Maldivian Rufiyaa (MVR)</option>
+                  <option value="MXN">Mexican Peso (MXN)</option>
+                  <option value="MYR">Malaysian Ringgit (MYR)</option>
+                  <option value="NOK">Norwegian Krone (NOK)</option> 
+                  <option value="NZD">New Zealand Dollar (NZD)</option>
+                  <option value="PAB">Panamanian Balboa (PAB)</option>
+                  <option value="PEN">Peruvian Sol (PEN)</option>
+                  <option value="PHP">Philippine Peso (PHP)</option>
+                  <option value="PKR">Pakistani Rupee (PKR)</option>
+                  <option value="PLN">Polish Zloty (PLN)</option>
+                  <option value="PYG">Paraguayan Guarani (PYG)</option>
+                  <option value="RON">Romanian Leu (RON)</option>
+                  <option value="RUB">Russian Ruble (RUB)</option>
+                  <option value="SAR">Saudi Riyal (SAR)</option>
+                  <option value="SEK">Swedish Krona (SEK)</option>
+                  <option value="SGD">Singapore Dollar (SGD)</option>
+                  <option value="THB">Thai Baht (THB)</option>
+                  <option value="TRY">Turkish Lira (TRY)</option>
+                  <option value="TWD">New Taiwan Dollar (TWD)</option>
+                  <option value="UAH">Ukrainian Hryvnia (UAH)</option>
+                  <option value="UYU">Uruguayan Peso (UYU)</option>
+                  <option value="ZAR">South African Rand (ZAR)</option>
+                </select>
+              </div>
+              <div class="form-group col-md-5">
+                <label for="baseAmount" class="">Amount</label>
+                <input type="number" class="form-control" id="baseAmount" min="0" step="any" value="1.00" onfocus="this.value = ''">
+              </div>
+              <div class="form-group col-md-2">
+                <h2 class="gold-text">>> T >></h2>
+              </div>
+              <div class="form-group col-md-5">
+                <label for="targetAmount" class="">Amount</label>
+                <input type="number" class="form-control" id="targetAmount" step="any" disabled placeholder="Currency conversion">
+              </div>
             </div>
-            <div class="form-group col-md-2">
-              <h2 class="gold-text">>> T >></h2>
+            <div>
+              <span><small class="pt-5" id="error"></small></span>
+              <input type="submit" class="btn mt-3 col-md-12" value="EXCHANGIFY!">
             </div>
-            <div class="form-group col-md-5">
-              <label for="targetCurrency" class="">Currency</label>
-              <select class="form-control" id="targetCurrency" required>
-                <option disabled selected value>Select Currency</option>
-                <option value="USD">United States Dollar (USD)</option>
-                <option value="AED">UAE Dirham (AED)</option>
-                <option value="ARS">Argentine Peso (ARS)</option>
-                <option value="AUD">Australian Dollar (AUD)</option>
-                <option value="BGN">Bulgarian Lev (BGN)</option>
-                <option value="BRL">Brazilian Real (BRL)</option>
-                <option value="BSD">Bahamian Dollar (BSD)</option>
-                <option value="CAD">Canadian Dollar (CAD)</option>
-                <option value="CHF">Swiss Franc (CHF)</option>
-                <option value="CLP">Chilean Peso (CLP)</option>
-                <option value="CNY">Chinese Renminbi (CNY)</option>
-                <option value="COP">Columbian Peso (COP)</option>
-                <option value="CZK">Czech Koruna (CZK)</option>
-                <option value="DKK">Danish Krone (DKK)</option>
-                <option value="DOP">Dominican Peso (DOP)</option>
-                <option value="EGP">Egyptian Pound (EGP)</option>
-                <option value="EUR">Euro (EUR)</option>
-                <option value="FJD">Fiji Dollar (FJD)</option>
-                <option value="GBP">Pound Sterling (GBP)</option>
-                <option value="GTQ">Guatemalan Quetzal (GTQ)</option>
-                <option value="HKD">Hong Kong Dollar (HKD)</option>
-                <option value="HRK">Croatian Kuna (HRK)</option>
-                <option value="HUF">Hungarian Forint (HUF)</option>
-                <option value="IDR">Indonesian Rupiah (IDR)</option>
-                <option value="ILS">Israeli New Shekel (ILS)</option>
-                <option value="INR">Indian Rupee (INR)</option>
-                <option value="ISK">Icelandic Krona (ISK)</option>
-                <option value="JPY">Japanese Yen (JPY)</option>
-                <option value="KRW">South Korean Won (KRW)</option>
-                <option value="KZT">Kazakhstani Tenge (KZT)</option>
-                <option value="MVR">Maldivian Rufiyaa (MVR)</option>
-                <option value="MXN">Mexican Peso (MXN)</option>
-                <option value="MYR">Malaysian Ringgit (MYR)</option>
-                <option value="NOK">Norwegian Krone (NOK)</option> 
-                <option value="NZD">New Zealand Dollar (NZD)</option>
-                <option value="PAB">Panamanian Balboa (PAB)</option>
-                <option value="PEN">Peruvian Sol (PEN)</option>
-                <option value="PHP">Philippine Peso (PHP)</option>
-                <option value="PKR">Pakistani Rupee (PKR)</option>
-                <option value="PLN">Polish Zloty (PLN)</option>
-                <option value="PYG">Paraguayan Guarani (PYG)</option>
-                <option value="RON">Romanian Leu (RON)</option>
-                <option value="RUB">Russian Ruble (RUB)</option>
-                <option value="SAR">Saudi Riyal (SAR)</option>
-                <option value="SEK">Swedish Krona (SEK)</option>
-                <option value="SGD">Singapore Dollar (SGD)</option>
-                <option value="THB">Thai Baht (THB)</option>
-                <option value="TRY">Turkish Lira (TRY)</option>
-                <option value="TWD">New Taiwan Dollar (TWD)</option>
-                <option value="UAH">Ukrainian Hryvnia (UAH)</option>
-                <option value="UYU">Uruguayan Peso (UYU)</option>
-                <option value="ZAR">South African Rand (ZAR)</option>
-              </select>
-            </div>
-            <div class="form-group col-md-5">
-              <label for="baseAmount" class="">Amount</label>
-              <input type="number" class="form-control" id="baseAmount" min="0" step="any" value="1.00" onfocus="this.value = ''">
-            </div>
-            <div class="form-group col-md-2">
-              <h2 class="gold-text">>> T >></h2>
-            </div>
-            <div class="form-group col-md-5">
-              <label for="targetAmount" class="">Amount</label>
-              <input type="number" class="form-control" id="targetAmount" step="any" disabled placeholder="Currency conversion">
-            </div>
-          </div>
-          <div>
-            <span><small class="pt-5" id="error"></small></span>
-            <input type="submit" class="btn mt-3 col-md-12" value="EXCHANGIFY!">
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
+      <hr>
     </div>
-    <hr>
-  </div> 
-  <div class="container grifter-drivel">
-    <div class="row">
-      <div class="col-md-10">
-        <h5 class="pt-5">In financial trouble? Another racketeering scheme gone... awry? Just need to launder money to offshore bank accounts, but don't know those pesky, everchanging conversion rates?</h5>
-        <img src="https://media.giphy.com/media/m7FO0p9hTc59e/giphy.gif" alt="gif of 'the mask' with handfuls of cash" class="gif">
-        <p class="pt-5 mt-3">Fear not! Our prospectively certified financial consultant is here to <span style='text-decoration-line:line-through'>sell you</span> help!</p>
-        <p>It's worth noting that our customer testimonials <span style='text-decoration-line:line-through'>have been censored though</span> are considered too praiseworthy by the BBB and FCC to broadcast to the public!</p>
-        <p>In addition to our financial consulting, we also offer a wide variety of <span style='text-decoration-line:line-through'>scams</span> services, including but not limited to: snake-oil testing and purification, organically sourced counterfeit currency, and bona-fide medical quackery!</p>
-      </div>
-      <div class="click-today">
-        <p>So whaddaya say chap!? Put down that corndog and contact us today for a limited, one-time-only special-offer, bargain-bonus-blowout, *free* consultation!</p>
-        <button class="btn" onclick="window.location.href='https://www.youtube.com/watch?v=-0kcet4aPpQ&list=PLi91b1ORYr4RVHcGEOFKhNBzB2rAvqQtr&index=28';">Change Your Life With Just One Click!!!</button>
-        <br>
-        <small>*(terms and conditions apply: <em>free</em> is a raaather loose definition and all passwords, bank info, ssn's, etc will be required without explanation or guarantee of secure processing)*</small>
-      </div>
-    </div>
-    <hr>
   </div>
 </body>
 <footer>
-  <span class="gold-text">Exchangerator &copy 2020<br>A begrudingly proud subsidiary of Incompetent Charlatans, Inc.</span>
+  <span class="gold-text">Exchangerator &copy 2020</span>
 </footer>
 </html>
