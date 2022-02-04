@@ -11,5 +11,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log('Server is up!');
+  console.log('Server is up! Go to http://localhost:3000 to view in browser.');
 });
