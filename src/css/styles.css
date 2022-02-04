@@ -35,17 +35,23 @@ body {
   color: var(--washingtonsBeardGreen);
 }
 
-body::after {
+body::before {
   content: "";
-  background: url('./../assets/img/money-hole.jpg') no-repeat fixed;
+  background: url('./../assets/img/money-hole.jpg') no-repeat;
   background-size: cover;
   opacity: .03;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  height: 100%;
+  width: 100%;
   position: fixed;
   z-index: -1;   
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 h1 {
@@ -113,16 +119,6 @@ p {
   box-shadow: 0 0 .5rem var(--getThemFrogskinsGreen);
 }
 
-.gif {
-  /* display: block; */
-  /* margin: 0 auto; */
-  margin: 3rem;
-  border-radius: 2rem;
-  border: .1rem solid var(--stayGoldenPonyboy);
-  box-shadow: 0 0 .75rem var(--getThemFrogskinsGreen);
-  float: right;
-}
-
 .gold-text {
   background-image: var(--goldilocksGradient);
   color:transparent;
@@ -130,17 +126,15 @@ p {
   -moz-background-clip: text;
 }
 
-.click-today {
-  text-align: center;
-}
-
 footer {
   font-family: 'Diplomata SC', cursive;
-  font-size: .75rem;
+  font-size: 1rem;
   background: var(--cashMoneyGreen);
   opacity: .5;
   text-align: center;
   box-shadow: 0 0 8rem var(--stayGoldenPonyboy);
   padding: 1rem;
-  margin-top: 5rem;
+  margin-top: 2rem;
+  bottom: 0;
+  width: 100%;
 }
